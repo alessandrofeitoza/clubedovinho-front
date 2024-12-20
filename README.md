@@ -6,7 +6,7 @@ Aplicação em HTML, CSS, bootstrap para o frontend de um ecommerce de vinhos
 <table>
 <thead>
   <tr>
-    <th colspan="2">Categoria</th>
+    <th colspan="3">Categoria</th>
   </tr>
 <tr>
 <th>Campo</th>
