@@ -1,0 +1,71 @@
+<script>
+    // tipos primitivos de dados
+    let nome = "Chiquim"; // string
+    let idade = 30; // int
+    let saldo = - 567.98; // float
+    let esta_matriculado = true; // bool
+
+    // pseudo tipos
+    let telefone = null;
+    let endereco = undefined;
+
+    // operadores logicos / de comparação
+
+    // = atribuicao
+    // == igualdade de valor
+    // === identicidade (valor e tipo iguais)
+
+    // ! negação
+    // != diferente (do valor)
+    // !== diferente (do valor e do tipo)
+
+    // < menor que
+    // <= menor ou igual
+    // > maior que
+    // >= maior ou igual
+
+
+    // let x = 0;
+
+    // if (x === '0') {
+    //     document.write('é igual');
+    // } else {
+    //     document.write('é diferente');
+    // }
+
+
+    // let aluno1 = 'Maria';
+    // let aluno2 = 'Josefa';
+    // let aluno3 = 'Zenilda';
+
+    let alunos = [
+        'Maria',
+        'Josefa',
+        'Zenilda',
+    ];
+
+    //pra adicionar alguem na lista
+    alunos.push('Amanda');
+    alunos.push('Barbara');
+    alunos.push('Carla');
+    alunos[5] = 'Denise';
+
+    alunos.push('Emilia');
+    alunos.push('Fernanda');
+    alunos.push('Geciola');
+    alunos.push('Hilda');
+    alunos.push('izolda');
+
+    for (let n = 0; n < alunos.length; n++) {
+        alunos[n] = alunos[n].toUpperCase();
+    }
+
+    //ordenado por ordem alfabetica
+    alunos.sort();
+
+    alunos.reverse();
+
+    for (let n = 0; n < alunos.length; n++) {
+        document.write(alunos[n] + '<br>');
+    }
+</script>
