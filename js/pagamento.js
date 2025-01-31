@@ -29,3 +29,32 @@ const MESES = [
 for (let mes = 0; mes <= 11; mes++) {
     SELECT_MES.innerHTML += `<option>${MESES[mes]}</option>`;
 }
+
+const SPAN_NUMERO = document.getElementById('resultado_numero');
+const SPAN_TITULAR = document.getElementById('resultado_titular');
+
+const SPAN_ANO = document.getElementById('resultado_ano');
+const SPAN_MES = document.getElementById('resultado_mes');
+
+
+function preencherNumero() {
+    SPAN_NUMERO.innerHTML = INPUT_NUMERO.value;
+}
+
+function preencherTitular() {
+    SPAN_TITULAR.innerHTML = INPUT_TITULAR.value;
+}
+
+function selecionarAno() {
+    SPAN_ANO.innerHTML = SELECT_ANO.value
+}
+
+function selecionarMes() {
+    let m = SELECT_MES.selectedIndex;
+
+    if (m < 10) {
+        SPAN_MES.innerHTML = "0"+m;
+    } else {
+        SPAN_MES.innerHTML = m;
+    }
+}
