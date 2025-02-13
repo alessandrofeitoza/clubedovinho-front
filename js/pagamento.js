@@ -32,13 +32,31 @@ for (let mes = 0; mes <= 11; mes++) {
 
 const SPAN_NUMERO = document.getElementById('resultado_numero');
 const SPAN_TITULAR = document.getElementById('resultado_titular');
+const SPAN_CVV = document.getElementById('resultado_cvv');
 
 const SPAN_ANO = document.getElementById('resultado_ano');
 const SPAN_MES = document.getElementById('resultado_mes');
 
 
+function removerUltimoDigito(numero) {
+    return numero.substr(0, numero.length - 1);
+}
+
 function preencherNumero() {
-    SPAN_NUMERO.innerHTML = INPUT_NUMERO.value;
+    let digitos = INPUT_NUMERO.value; 
+
+    if (isNaN(digitos)) {
+        //substituindo tudo que não for numero, por nada
+        digitos = digitos.replace(/\D/g, ''); 
+    }
+
+    //isso aqui adiciona um espaço vazio a cada 04 digitos
+    digitos = digitos.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+    INPUT_NUMERO.value = digitos; 
+    SPAN_NUMERO.innerHTML = digitos; 
+
+    alterarBandeira();
 }
 
 function preencherTitular() {
@@ -57,4 +75,42 @@ function selecionarMes() {
     } else {
         SPAN_MES.innerHTML = m;
     }
+}
+
+function alterarBandeira() {
+    // esse IF serve apenas para melhorar a performance da aplicacao
+    if (INPUT_NUMERO.value.length > 1) {
+        return;
+    } 
+
+    // TODO: melhorar esse codigo pra evitar ficar muito grande
+    document.getElementById('bandeira_visa').style.display = 'none';
+    document.getElementById('bandeira_mastercard').style.display = 'none';
+
+    if (INPUT_NUMERO.value === '4') {
+        document.getElementById('bandeira_visa').style.display = 'block';
+    } 
+
+    if (INPUT_NUMERO.value === '5') {
+        document.getElementById('bandeira_mastercard').style.display = 'block';
+    }
+}
+
+function preencherCVV() {
+    SPAN_CVV.innerHTML = INPUT_CVV.value;
+}
+
+
+function mostrarFrente() {
+    document.getElementById('cartao_frente').classList.add('animate__slideInRight');
+
+    document.getElementById('cartao_frente').style.display = 'block';
+    document.getElementById('cartao_verso').style.display = 'none';
+}
+
+function mostrarVerso() {
+    document.getElementById('cartao_verso').classList.add('animate__slideInRight');
+
+    document.getElementById('cartao_verso').style.display = 'block';
+    document.getElementById('cartao_frente').style.display = 'none';
 }
