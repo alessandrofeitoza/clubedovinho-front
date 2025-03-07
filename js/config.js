@@ -25,3 +25,8 @@ function habilitarDarkmode(event) {
         <link rel="stylesheet" href="../css/darkmode.css">
     `;
 }
+
+
+if (localStorage.getItem('darkmode') === 'sim') {
+    document.getElementById('darkmode').checked = true; 
+}
