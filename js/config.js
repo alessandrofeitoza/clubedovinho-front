@@ -11,3 +11,17 @@ function alterarQuantidade(evento) {
 
     SPAN_QUANTIDADE.innerHTML = qtd;
 }
+
+function habilitarDarkmode(event) {
+    if (event.checked === false) {
+        localStorage.setItem('darkmode', 'nao');
+        location.href = "";
+        return;
+    }
+
+    localStorage.setItem('darkmode', 'sim');
+
+    document.getElementsByTagName("head")[0].innerHTML += `
+        <link rel="stylesheet" href="../css/darkmode.css">
+    `;
+}

@@ -1,0 +1,21 @@
+html, body {
+    background-color: #555;
+}
+
+h2 {
+    color: #FFF;
+}
+
+hr {
+    border-color: #FFF;
+}
+
+.btn-outline-dark {
+    background-color: #EEE;
+    color: #333;
+}
+
+.card-body {
+    background-color: #444;
+    color: #FFF;
+}
