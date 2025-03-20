@@ -35,7 +35,7 @@ function excluir(id) {
         method: 'DELETE'
     });
 
-    location.href = "";
+    // location.href = "";
 }
 
 
@@ -44,4 +44,27 @@ function abrirModal(nome, imagem) {
     document.getElementById('modal_produto_body').innerHTML = `
         <img src="${imagem}" width="100%">
     `;
+}
+
+function addProduct() {
+    event.preventDefault();
+
+    let dados = {
+        name: document.getElementById('name').value,
+        price: document.getElementById('price').value,
+        category: document.getElementById('category').value,
+        quantity: document.getElementById('quantity').value,
+        image: document.getElementById('image').value,
+    };
+
+    fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    });
+
+    alert('Pronto, cadastrado com sucesso');
+    location.href = "";
 }
