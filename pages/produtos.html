@@ -74,7 +74,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="" onsubmit="addProduct()">
+                  <form id="form" action="" onsubmit="addProduct()">
                     <label for="name">Nome</label>
                     <input id="name" type="text" class="form-control mb-3" placeholder="Digite o nome do produto">
                     
@@ -95,7 +95,7 @@
                     <label for="price">Preço</label>
                     <input id="price" type="number" min="0" step="0.01" class="form-control mb-3" placeholder="Digite o nome do produto">
 
-                    <button class="btn btn-primary w-100">PRONTO</button>
+                    <button data-bs-dismiss="offcanvas" class="btn btn-primary w-100">PRONTO</button>
                   </form>
                 </div>
               </div>
