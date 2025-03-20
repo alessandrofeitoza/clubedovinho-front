@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "5",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.awsli.com.br/600x450/1231/1231345/produto/257050016/vinho-tinto-quinta-do-morgado-750ml-jtllwzmyuj.jpg",
+      "quantity": 12
+    },
+    {
+      "id": "6",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.awsli.com.br/600x450/1231/1231345/produto/257050016/vinho-tinto-quinta-do-morgado-750ml-jtllwzmyuj.jpg",
+      "quantity": 12
+    },
+    {
+      "id": "7",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.awsli.com.br/600x450/1231/1231345/produto/257050016/vinho-tinto-quinta-do-morgado-750ml-jtllwzmyuj.jpg",
+      "quantity": 12
+    },
+    {
+      "id": "8",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.awsli.com.br/600x450/1231/1231345/produto/257050016/vinho-tinto-quinta-do-morgado-750ml-jtllwzmyuj.jpg",
+      "quantity": 12
+    },
+    {
+      "id": "9",
+      "name": "Quinta do Morgado",
+      "price": 10.89,
+      "category": "Vinho Suave",
+      "image": "https://cdn.awsli.com.br/600x450/1231/1231345/produto/257050016/vinho-tinto-quinta-do-morgado-750ml-jtllwzmyuj.jpg",
+      "quantity": 12
+    }
+  ]
+}
